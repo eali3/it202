@@ -1,178 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>MDL-Static Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-    <title>Business Casual - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="https://blackrockdigital.github.io/startbootstrap-business-casual/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="https://blackrockdigital.github.io/startbootstrap-business-casual/css/business-casual.css" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-
-    <div class="brand"> <i> Taste the World </i> </div>
-    <div class="brand"> <i><b>Treat yourself with the best of the world</b></i></div>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Business Casual</a>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">Simple portfolio website</span>
+                </span>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">Past boxes</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Customize</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Payment plan</a>
-                    </li>
-                </ul>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link is-active" href="index.html"><font size = 5 color="white"><b>Portfolio</b></font></a>
+                   
+                    <a class="mdl-navigation__link" href="about.html"><font size = 5 color="white"><b>About</b></font></a>
+                    
+                </nav>
             </div>
-            <!-- /.navbar-collapse -->
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
+               
+                <a class="mdl-navigation__link" href="about.html">About</a>
+             
+            </nav>
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12 text-center">
-                    <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="img-responsive img-full" src="https://d3a1v57rabk2hm.cloudfront.net/fe2d8a519dce458fa8ed72f92bc57dc5_600.jpeg" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="http://cdn.foodbeast.com/content/uploads/2015/11/UY-India.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="https://images.food52.com/mEQ1J4UMC0IoDWBOngf05g3L0Fw=/d6a9d387-280f-40f6-bf8c-4244a3dcc059--18203046310_080faf8bd5_b.jpg" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <span class="icon-prev"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <span class="icon-next"></span>
-                        </a>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" eali3.github.io/it202/images/game.png" border="0" alt="" height="200" width="450">
                     </div>
-                    <h2 class="brand-before">
-                        <small>Welcome to</small>
-                    </h2>
-                    <h1 class="brand-name">Taste the world</h1>
-                    <hr class="tagline-divider">
-                    <h2>
-                       
-                            <strong>We bring you the food from around the world to your doorstep</strong>
-                    </h2>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Scrolling game</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        This is a simple scrolling game in which the player character moves from the left side of the screen to the right, and earns points when it 
+                        collides with a yellow object and loses a life after colliding with a red object.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="eali3.github.io/it202/projects/pro.html">view game</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Try it for yourself or
-                        <strong>Even better, gift it to someone special</strong>
-                    </h2>
-                    <hr>
-                    <img class="img-responsive img-border img-left" src="https://blackrockdigital.github.io/startbootstrap-business-casual/img/intro-pic.jpg" alt="">
-                    <hr class="visible-xs">
-                    <p>Why shell out money for foreign tickets to try food from around the world? When you have the option of getting it at your doorstep, try anything from swedish candy to cookies from paris.
-                    Every month we will deliver food from a country at your doorstep. Allow us to bring you the best of the best from anywhere and everywhere. Looking for a perfect gift for someone? <strong>Look no further!</strong> </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Choose what you like
-                        <strong>And customize what you wish to snack on</strong>
-                    </h2>
-                    <hr>
-                    <p>choose from almost a 100 countries, yes you read that right, <strong> 100! </strong> never tried japanese snacks? our service allows you to choose the kind of candy and snacks you would like to try from anywhere around the world!!</p>
-                    <p> Sign up now and enjoy food from around the world delivered at your doorstep!  </p>
+                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="eali3.github.io/it202/images/food.png" border="0" alt="" height="200" width="350">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Project 1</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">  
+                        In this project, a bootstrap template was used to build a website for a company
+                    </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="eali3.github.io/it202/projects/1/index.html">take me to the website</a>
+                    </div>
+                </div> 
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="eali3.github.io/it202/images/htm.jpg" border="0" alt="" height="200" width="350">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lab 2</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">  
+                        This lab assignment gives a basic introduction to HTML.
+                    </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="eali3.github.io/it202/labs/labs2.html">display</a>
+                    </div>
+                </div> 
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card"> 
+                
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="eali3.github.io/it202/images/js.jpg" border="0" alt="" height="200" width="350">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lab 7</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        This lab was an introduction to javascript and how to create functions 
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="eali3.github.io/it202/labs/lab7.html">display</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" eali3.github.io/it202/images/lb.png" border="0" alt="" height="200" width="350">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">modifying a bootstrap template</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        The purpose of this lab was to learn how to alter a bootstrap template and change it's appearance.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="eali3.github.io/it202/labs/lab3.html">Read more</a>
+                    </div>
+                </div>
 
+               
+               
+               
+               
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Simple portfolio website</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
     </div>
-    <!-- /.container -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="https://blackrockdigital.github.io/startbootstrap-business-casual/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://blackrockdigital.github.io/startbootstrap-business-casual/js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>
 
 </html>
