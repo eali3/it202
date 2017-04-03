@@ -1,0 +1,181 @@
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <style type="text/css">
+    #t2{
+      color: white;
+      border-collapse: collapse;
+    width: 100%;
+    }
+    table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 30px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+    
+    #img {
+      height: 200vh;
+      background-size: 100% 100%;
+   
+    background-image: url("http://upload.wikimedia.org/wikipedia/commons/1/12/CTA_Night.jpg");
+    }
+   #img2 {
+      height: 200vh;
+      background-size: 100% 100%;
+    
+    background-image: url("http://www.trbimg.com/img-5031b209/turbine/ct-met-gettingaround-jp.jpg-20120819/600");
+    }
+     #img3 {
+      height: 200vh;
+      background-size: 100% 100%;
+    
+    background-image: url("https://bomaelevatorspeech.files.wordpress.com/2012/07/l-train-skyline.jpg");
+    }
+  
+  
+    #p1{
+    text-shadow: 2px 2px 8px #FF0000;
+    color: white;  
+    position: absolute;
+    left: 15%;
+   top:50%;
+   font-size: 350%;
+}
+  #p2{
+      text-shadow: 2px 2px 8px ;
+    color: white;  
+    position: absolute;
+    left: 10%;
+   top:85%;
+   font-size: 300%;
+}
+#p3{
+    text-shadow: 2px 2px 8px ;
+    color: white;  
+    position: absolute;
+    left: 10%;
+   top:95%;
+   font-size: 250%;
+}
+    
+    
+  </style>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">About</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab">Bus tracker</a>
+          <a href="#fixed-tab-3" class="mdl-layout__tab">Train tracker</a>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+      </div>
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+          <div class="page-content">
+            <div id = "img"> 
+            <div id = "txt1" > <p id= "p1"> <i>Welcome to Your personalized CTA App</i></p></div>
+            <p id = "p2"> Developer information:</p>
+           <p id = "p3"> The creative developer of this amazing app is Eram Ali. <br>
+           She is a math and computer science major at the University of Illinois at Chicago. <br>
+           she Loves to read and make amazing things.</p>
+            </div>
+            
+      
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+          <div class="page-content">
+             <div id = "img2"> 
+            <div id = "txt1" > 
+             <table style="width:80%" id = "t2">
+  <tr>
+    <th><b>Bus route</b></th>
+    <th>Time of arrival</th> 
+    
+  </tr>
+  <tr>
+    <td>79 East bound</td>
+    
+    <td>3 mins</td>
+  </tr>
+  <tr>
+    <td>79 West bound</td>
+    <td>5 mins</td>
+ 
+  </tr>
+  <tr>
+    <td>8 East bound</td>
+    <td>8 mins</td>
+  
+  </tr>
+</table>
+            
+            </div>
+            
+            
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+          <div class="page-content">
+            <div id = "img3"> 
+            <div id = "txt2" > 
+  
+  <table style="width:80%" id = "t1">
+  <tr>
+    <th><b>Route</b></th>
+    <th>Time of arrival</th> 
+    
+  </tr>
+  <tr>
+    <td>UIC Halsted East bound</td>
+    
+    <td>5 mins</td>
+  </tr>
+  <tr>
+    <td>UIC Halsted West bound</td>
+    <td>7 mins</td>
+ 
+  </tr>
+  <tr>
+    <td>UIC Halsted East bound</td>
+    <td>8 mins</td>
+  
+  </tr>
+</table>
+            </div>
+            
+          </div>
+        </section>
+      </main>
+    </div>
+  
+  </body>
+</html>

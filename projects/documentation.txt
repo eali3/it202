@@ -1,0 +1,6 @@
+My client suggested I create an app that would make it easier for her to check the estimated time of arrival for the buses and trains she 
+uses on an everyday basis, instead of searching for them on the CTA app each time. this app only saves and displays the ones the client uses frequently.
+to keep it very simple the app has three tabs, about tab, bus tracker tab, and a train tracker tab.
+the about tab contains some information about the developer.
+both the bus tracker and tracker tabs contain a hoverable table that displays 3 to 4 most frequent bus routes and stops and their estimated time of arrival.
+The client really enjoys the simple interface, and says it saves her time and only shows what she needs. 
