@@ -4,22 +4,25 @@
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <title>jQuery.parseXML demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
    <link rel="stylesheet" type="text/css" href="styles/inline.css">
     <style type="text/css">
     #t2{
-      color: white;
+    color: white;
       border-collapse: collapse;
     width: 100%;
+    
     }
     table {
     border-collapse: collapse;
     width: 100%;
+    
 }
 
 th, td {
     padding: 30px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
@@ -79,6 +82,97 @@ tr:hover{background-color:#f5f5f5}
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script>
+      if('serviceWorker' in navigator) {
+            navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
+    self.addEventListener("install", function (event) {
+    event.waitUntil(
+    caches.open(cacheNameStatic)
+      .then(function (cache) {
+        return cache.addAll([
+          "/project5.html/",
+         
+        ]);
+      })
+  );
+});
+     var var1, var2
+     var dirvar
+      var array = [];
+      function getDirection() {
+        $(function() {
+          
+          var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+          var apiEndpoint = "http://ctabustracker.com/bustime/api/v2/getdirections";
+          var ulr = apiEndpoint + "rt=" + var1;
+          
+          $.ajax({
+              url: apiPassThruUrl,
+              dataType: "json",
+              method: 'GET',
+              data: {"apiEndpoint":apiEndpoint ,
+                     "key": "GEuNwKYHDWTAFxcw48DkMrUBj",
+                     "rt" : var1,
+                     "format" : "json" 
+              }
+            }).done (function (data) {
+           
+          
+              $.each(data["bustime-response"]["directions"], function(i,v) {
+                  array.push(v.dir);
+               $("#t1").append("<tr><td> " + v.dir+ "</td></tr>");
+            $("#t1").click (function() {
+             
+            var2 = $(this).val();
+
+   
+           getstops();        
+});
+
+
+              })
+            });
+        })};
+        function getstops() {
+        $(function() {
+         
+          var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+          var apiEndpoint =  "http://www.ctabustracker.com/bustime/api/v2/getstops";
+          
+          
+          $.ajax({
+           
+              url: apiPassThruUrl,
+              dataType: "json",
+              method: 'GET',
+              data: {"apiEndpoint": apiEndpoint,
+                      "key" : "GEuNwKYHDWTAFxcw48DkMrUBj",
+                      "rt" : var1,
+                      "dir" : var2,
+                      "format":"json"}
+            }).done (function (data) {
+              console.log(data);
+               $.each(data["bustime-response"]["getstops"], function(i,v) {
+              
+               $("#t1").append("<tr><td> " + v.stop+ "</td></tr>");
+                
+              })
+
+            });
+        })};
+            
+ 
+    function assign(a) {
+     var1 = a;
+    $(".r").hide();
+    getDirection();
+} 
+
+        </script>
     <!-- Simple header with fixed tabs. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
                 mdl-layout--fixed-tabs">
@@ -116,32 +210,48 @@ tr:hover{background-color:#f5f5f5}
              <div id = "img2"> 
             <div id = "txt1" > 
              <table style="width:80%" id = "t2">
-  <tr>
-    <th><b>Bus route</b></th>
-    <th>Time of arrival</th> 
+              <tr>
+                
+                <th class = "r"><b>BUS ROUTE</b></th>
     
-  </tr>
-  <tr>
-    <td>79 East bound</td>
-    
-    <td>3 mins</td>
-  </tr>
-  <tr>
-    <td>79 West bound</td>
-    <td>5 mins</td>
- 
-  </tr>
-  <tr>
-    <td>8 East bound</td>
-    <td>8 mins</td>
-  
-  </tr>
-</table>
+              </tr>
+              <tr>
+                <td onclick ="assign(7)" class = "r">7 - HARRISON</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(8)" class = "r">8 - HALSTED</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(8A)" class = "r">8A - SOUTH HALSTED</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(29)" class = "r">29 - STATE</td>
+              </tr> 
+                <tr>
+                <td onclick ="assign(60)" class = "r">60 - BLUE ISLAND/26TH</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(65)" class = "r">65 - GRAND</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(121)" class = "r">121 - UNION/STREETERVILLE EXPRESS</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(124)" class = "r">124 NAVY PIER</td>
+              </tr> 
+              <tr>
+                <td onclick ="assign(126)" class = "r">126 - JACKSON</td>
+              </tr>
+              <tr>
+                <td onclick ="assign(157)" class = "r">157 - STREETERVILLE/TAYLOR</td>
+              </tr> 
+            </table>
             
             </div>
             
             
           </div>
+        
         </section>
         <section class="mdl-layout__tab-panel" id="fixed-tab-3">
           <div class="page-content">
@@ -149,26 +259,9 @@ tr:hover{background-color:#f5f5f5}
             <div id = "txt2" > 
   
   <table style="width:80%" id = "t1">
-  <tr>
-    <th><b>Route</b></th>
-    <th>Time of arrival</th> 
-    
-  </tr>
-  <tr>
-    <td>UIC Halsted East bound</td>
-    
-    <td>5 mins</td>
-  </tr>
-  <tr>
-    <td>UIC Halsted West bound</td>
-    <td>7 mins</td>
- 
-  </tr>
-  <tr>
-    <td>UIC Halsted East bound</td>
-    <td>8 mins</td>
+
   
-  </tr>
+  
 </table>
             </div>
             
